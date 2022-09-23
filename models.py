@@ -1,7 +1,7 @@
 from enum import Enum
 from pydantic import BaseModel
 from typing import Optional, List
-from uuid import UUID, uuid4
+
 
 class Gender(str, Enum):
     male = "male"
@@ -13,7 +13,7 @@ class Role(str, Enum):
     manager = "manager"
 
 class User(BaseModel):
-    id: Optional[UUID] = uuid4()
+    id: int
     first_name: str
     last_name: str
     middle_name: Optional[str]

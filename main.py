@@ -1,19 +1,18 @@
 from fastapi import FastAPI
-from uuid import uuid4
 from typing import List
 from models import User, Gender, Role
 
 app = FastAPI()
 db: List[User] = [
     User(
-        id=uuid4(),
+        id=1,
         first_name="Bogdan",
         last_name="Ziolko",
         gender=Gender.male,
         roles=[Role.user]
     ),
     User(
-        id=uuid4(),
+        id=2,
         first_name="Kamila",
         last_name="Maj",
         gender=Gender.female,
